@@ -1,0 +1,9 @@
+target/
+.idea/
+.settings/
+/public
+/.classpath
+/.project
+/*.iml
+/.vscode
+/logs
