@@ -1,2 +1,2 @@
 # resource_center
-# 随便看看
+# 经供参考 随缘更新
