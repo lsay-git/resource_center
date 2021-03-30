@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mysql-test:
+    image: mysql
+    container_name: mysql-test
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: lsay
+      MYSQL_PASSWORD: sida8028
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/conf:/etc/mysql/conf.d
+    ports:
+      - 13306:3306
+    restart: unless-stopped
+

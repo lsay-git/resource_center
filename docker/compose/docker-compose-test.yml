@@ -1,0 +1,23 @@
+# yaml 配置
+# version 指定本 yml 依从的 compose 哪个版本制定的
+version: '3'
+
+services:
+  mysql-test:
+    # 构建镜像
+    image: mysql
+    # 容器名称
+    container_name: mysql-test
+    # 环境变量
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: lsay
+      MYSQL_PASSWORD: sida8028
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/conf:/etc/mysql/conf.d
+    ports:
+      - 13306:3306
+    restart: unless-stopped
+
